@@ -273,51 +273,51 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 1'),
+                            label: Text('build a layout'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 2'),
+                            label: Text('list view'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 3'),
+                            label: Text('list horizontal view'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 4'),
+                            label: Text('grid view '),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 5'),
+                            label: Text('list types of items'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 6'),
+                            label: Text('list with spaced items'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 7'),
+                            label: Text('long list '),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 8'),
+                            label: Text('floating app above list'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 9'),
+                            label: Text('paralax effect'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 10'),
+                            label: Text('orientation'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 11'),
+                            label: Text('custom themes'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 12'),
+                            label: Text('custom fonts'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
@@ -325,7 +325,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
-                            label: Text('activity 14'),
+                            label: Text('active inactive'),
                           ),
                           NavigationRailDestination(
                             icon: Icon(Icons.checklist),
