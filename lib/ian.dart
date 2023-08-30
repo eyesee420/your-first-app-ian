@@ -3,6 +3,11 @@ import 'package:english_words/english_words.dart';
 import 'package:provider/provider.dart';
 import 'package:your_first_app/ian-widgets.pages/ActivityPage1.dart';
 import 'package:your_first_app/ian-widgets.pages/ActivityPage10.dart';
+import 'package:your_first_app/ian-widgets.pages/ActivityPage11.dart';
+import 'package:your_first_app/ian-widgets.pages/ActivityPage12.dart';
+import 'package:your_first_app/ian-widgets.pages/ActivityPage13.dart';
+import 'package:your_first_app/ian-widgets.pages/ActivityPage14.dart';
+import 'package:your_first_app/ian-widgets.pages/ActivityPage15.dart';
 import 'package:your_first_app/ian-widgets.pages/ActivityPage2.dart';
 import 'package:your_first_app/ian-widgets.pages/ActivityPage3.dart';
 import 'package:your_first_app/ian-widgets.pages/ActivityPage4.dart';
@@ -161,6 +166,22 @@ class _MyHomePageState extends State<MyHomePage> {
       case 11:
         page = const ActivityPage10();
         break;
+      case 12:
+        page = const ActivityPage11();
+        break;
+      case 13:
+        page = const ActivityPage12();
+        break;
+      case 14:
+        page = const ActivityPage13();
+        break;
+      case 15:
+        page = const ActivityPage14();
+        break;
+      case 16:
+        page = const ActivityPage15();
+        break;
+
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
@@ -234,66 +255,176 @@ class _MyHomePageState extends State<MyHomePage> {
           return Row(
             children: [
               SafeArea(
-                child: NavigationRail(
-                  extended: constraints.maxWidth >= 600,
-                  destinations: const [
-                    NavigationRailDestination(
-                      icon: Icon(Icons.home),
-                      label: Text('Home'),
+                child: SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                        minHeight: MediaQuery.of(context).size.height),
+                    child: IntrinsicHeight(
+                      child: NavigationRail(
+                        extended: constraints.maxWidth >= 600,
+                        destinations: const [
+                          NavigationRailDestination(
+                            icon: Icon(Icons.home),
+                            label: Text('Home'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.favorite),
+                            label: Text('Favorites'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 1'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 2'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 3'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 4'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 5'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 6'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 7'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 8'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 9'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 10'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 11'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 12'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 13'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 14'),
+                          ),
+                          NavigationRailDestination(
+                            icon: Icon(Icons.checklist),
+                            label: Text('activity 15'),
+                          ),
+                        ],
+                        selectedIndex: selectedIndex,
+                        onDestinationSelected: (value) {
+                          setState(() {
+                            selectedIndex = value;
+                          });
+                        },
+                      ),
                     ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.favorite),
-                      label: Text('Favorites'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 1'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 2'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 3'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 4'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 5'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 6'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 7'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 8'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 9'),
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.checklist),
-                      label: Text('activity 10'),
-                    ),
-                  ],
-                  selectedIndex: selectedIndex,
-                  onDestinationSelected: (value) {
-                    setState(() {
-                      selectedIndex = value;
-                    });
-                  },
+                  ),
                 ),
               ),
+
+              // SafeArea(
+              //   child: NavigationRail(
+              //     extended: constraints.maxWidth >= 600,
+              //     destinations: const [
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.home),
+              //         label: Text('Home'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.favorite),
+              //         label: Text('Favorites'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 1'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 2'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 3'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 4'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 5'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 6'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 7'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 8'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 9'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 10'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 11'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 12'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 13'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 14'),
+              //       ),
+              //       NavigationRailDestination(
+              //         icon: Icon(Icons.checklist),
+              //         label: Text('activity 15'),
+              //       ),
+              //     ],
+              //     selectedIndex: selectedIndex,
+              //     onDestinationSelected: (value) {
+              //       setState(() {
+              //         selectedIndex = value;
+              //       });
+              //     },
+              //   ),
+              // ),
               Expanded(child: mainArea),
             ],
           );
